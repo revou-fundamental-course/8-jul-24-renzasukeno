@@ -87,10 +87,11 @@ fieldset{
 /* form-group ini merupakan class dari masing-masing div (1 pertanyaan dan input di dalam form)
     sama seperti tadi, menggunakan pengaturan margin agar berjarak dan lebih rapih */
 .form-group{
-    margin-top: 20px;
+    margin-top: 35px;
     margin-bottom: 20px;
     border-radius: 20px;
     position:static;
+    display:block;
 }
 /* form-group input ini class dari jawaban input */
 .form-group input{
@@ -117,18 +118,18 @@ fieldset{
     font-weight:700;
 }
 #Weight{
-    margin-inline-start:199px;
+    margin-inline-start:179px;
     display: inline-flex;
     width:230px ;
     height:30px ;    
 }
 #Height{
-    margin-inline-start:192px;
+    margin-inline-start:172px;
     width:230px ;
     height:30px ;  
 }
 #Age{
-    margin-inline-start:258px;
+    margin-inline-start:238px;
     width:230px ;
     height:30px ;  
 }
