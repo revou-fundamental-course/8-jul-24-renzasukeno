@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<!-- ini bagian head untuk mengatur metan menghubungkan file css dan js external serta memasukkan title website -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Kalkulator,BMI">
+    <meta name="description" content="Kalkulator BMI untuk menhitung Body Mass Index dengan mudah dan cepat">
+    <meta name="author" content="Satya">
+    <link rel="icon" href="Asset/BMI.png">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <script src="JS/script.js"></script>
+    <title>Kalkulator BMI</title>
+    <!--meta name="description" adalah deskripsi untuk situs web
+        meta name="author" adalah untuk menampilkan author pada situs web
+        meta name="viewport" agar menetapkan area mana saja yang terlihat di situs web sekaligus menentukan skala kontennya
+      -->
+</head>
+<body>
+    <nav>
+    <header>
+        <h1>Kalkulator BMI</h1>
+    </header>
+    </nav>
+    <!-- section dibagi menjadi 2 ada container left dan right dan menggunakan flex
+        jadi, yang ada di section left akan ditampilkan di layar sebelah kiri
+        sedangkan section right akan ditampilkan disebelah kanan -->
+    <section class="container">
+        <section class="left">
+            <article>
+                <h2>Apa itu BMI?</h2>
+                <p id="BMI-article"> Body Mass Index (BMI) adalah ukuran yang digunakan untuk menilai 
+                    apakah seseorang memiliki berat badan yang sehat sesuai dengan tinggi badannya. 
+                    BMI dihitung dengan membagi berat badan seseorang dalam kilogram dengan kuadrat tinggi badannya dalam meter.
+                </p>
+            </article>
+            <section>
+                <h2>Kalkulator BMI</h2>
+                <!-- ini untuk form nya dan menggunakan fieldset, dan untuk inputnya ada 4: Gender, Berat badan, Tinggi bdan, Umur. 
+                 setiap input dan label ada di dalam div class="form-group" dan memiliki id="form-(jenis pertanyaan)", 
+                 label untuk pertanyaan dan ada di class="form-question", untuk input di css disebut dengan (.form-group input) 
+                 dan memiliki id masing-masing sesuai dengan jenis jawaban yang berasal dari "for" label
+                 kalau agak berantakan dan kurang rapih mohon maaff yahhh.. maklum masih belajar hehe    -->
+                <form id="Form-BMI" name="Form-BMI">
+                <fieldset>
+                    <div class="form-group" id="form-gender">
+                        <label class="form-question" id="Gender">Gender</label>
+                        <label for="Gender-pria" id="Pria">
+                            <input type="radio" name="Gender" value="pria" id="Gender-pria" class="Gender" checked />Pria
+                        </label>
+                        <label for="Wanita" id="Wanita">
+                            <input type="radio" name="Gender" value="wanita" id="Gender-wanita" class="Gender"/> Wanita 
+                        </label>
+                    </div>
+                    <div class="form-group" id="form-weight">
+                        <label class="form-question" for="Weight">Berat Badan</label> 
+                        <input type="text" name="Berat-badan" id="Weight" placeholder="Kg" required/>
+                    </div>
+                    <div class="form-group" id="form-height">
+                        <label class="form-question" for="Height">Tinggi Badan</label> 
+                        <input type="text" name="Tinggi-badan" id="Height" placeholder="cm" required/>
+                    </div>
+                    <div class="form-group" id="form-age">
+                        <label class="form-question" for="Age"> Umur </label>
+                        <input type="text" name="Umur" id="Age" placeholder="18 or older" required />
+                    </div>
+                    <!-- dibawah ini untuk buttonnya, ada 2 tipe button: Submit dan reset
+                        submit untuk menghasilkan output dan result dari kalkulator BMI
+                        sedangkan reset untuk mereset atau merefresh kembali isi form ataupun resultnya -->
+                    <div>
+                    <button type="submit" id="Hitung-button" class="button">Hitung BMI</button>
+                    <button type="reset" id="Reset-button" class="button">Reset</button>
+                    </div>
+                </fieldset>
+                </form>
+            </section>
+        </section>
+        <!-- ini section right yang akan menampilkan result dari perhitungan BMI, 
+         ada id output yang nantinya akan menampilkan output dari javascript -->
+        <section class="right">
+            <p id="output"></p>
+        </section>
+    </section>
+    <!-- ini bagian footer, simpel dan tidak bertele-tele yah, tapi lebih baik jika ada agar sesuai dengan aturan semantik-->
+    <footer class="footer">
+            <p>&copy; 2024 BMI Calculator. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+<!-- selesai -->

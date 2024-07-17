@@ -1,0 +1,217 @@
+/* display:block agar h1 tetap ditengah
+    margin set auto agar border dan posisi header tetap simetris di tengah
+     */
+h1{
+    color:rgb(64, 128, 188);
+    text-align: center;
+    border-bottom:solid;
+    border-width:5px;
+    border-radius: 5px;
+    padding:20px;
+    margin:20px;
+    font-size:200%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    display:block;
+    justify-items: center;
+    position:static;
+    width:50% ;
+    margin-left: auto;
+    margin-right:auto;
+}
+/* display:flex agar dapat membagi layar menjadi 2, sisi kiri dan sisi kanan
+    margin set auto agar posisi konten ditengah page*/
+.container{
+    font-family:'Times New Roman',Arial, Helvetica, sans-serif;
+    text-align: left;
+    border:solid;
+    border-width:medium;
+    border-color:rgb(0, 130, 255);
+    border-radius:10px;
+    background-color:rgb(232, 255, 224);
+    margin:auto;
+    display: flex;
+    width: 90%;
+    height: 100%;
+}
+/* flex:1 agar fungsi flex diatas bekerja */
+.left, .right {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    margin:auto;
+    text-align: justify;
+}
+.left{
+    position:static;
+    margin-top:10px
+}
+/* Subjudul,font-size untuk mengatur ukuran font, margin-bottom untuk mengatur margin bawah dan transition untuk mengatur transisi*/
+h2{
+    font-size:x-large;
+    margin-bottom: 1%;
+    font-weight:bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: 0.4s;
+}
+/* Bmi article disini hanya menggunakan pengaturan margin karena sebagian besar stylenya sudah ada di (.left, .right{}) */
+#BMI-article{
+    font-family:  Verdana, Sans-serif, Arial;
+    margin-bottom:40px;
+    margin-top:20px;
+
+}
+/* fieldset digunakan untuk menggambarkan kotak form, disini menggunakan border dan background color agar lebih menarik, serta margin agar memiliki jarak  */
+fieldset{
+    border: 4px solid rgb(142, 195, 245);
+    border-radius: 20px;
+    padding:20px;
+    margin-bottom: 20px;
+    margin-top:20px;
+    background-color: rgb(197, 242, 247);
+    transition: 0.4s;
+}
+/* form question ini merupakan class dari pertanyaan di dalam form, seperti gender umur, berat dna tinggi
+    menggunakan pengaturan font agar tulisan menjadi lebih menarik, menggunakan margin inline start agar ada jarak dari fieldset bagian krii
+     */
+.form-question{
+    font-family: Verdana, Sans-serif, Arial;
+    font-size: medium;
+    font-weight: bold;
+    margin-inline-start: 20px;
+    color: rgb(0, 0, 0);
+    margin-top:200px;
+    position:static;
+    transition: 0.4s;
+}
+/* form-group ini merupakan class dari masing-masing div (1 pertanyaan dan input di dalam form)
+    sama seperti tadi, menggunakan pengaturan margin agar berjarak dan lebih rapih */
+.form-group{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    position:static;
+}
+/* form-group input ini class dari jawaban input */
+.form-group input{
+    border-radius: 2px;
+    position: static;
+}
+/* ini juga sama, bedanya hanya ketika kita fokus ke dalam kotak pengisian maka akan ada efek tambahan yang lebih bagus */
+.form-group input:focus {
+    border-color:rgb(0, 130, 255);
+    outline:none;
+}
+/* nah ini bagian gender class untuk jawaban gender dalam hal ini pria atau wanita */
+.Gender{
+    display: inline;
+    color:black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*  nah disini adalah pengelompokan berdasarkan id untuk setiap jawaban, disini ada margin inline start agar berjarak dari pertanyaan form */
+#Gender-pria{
+    margin-inline-start:250px;
+}
+#Pria, #Wanita{
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    font-weight:700;
+}
+#Weight{
+    margin-inline-start:199px;
+    display: inline-flex;
+    width:230px ;
+    height:30px ;    
+}
+#Height{
+    margin-inline-start:192px;
+    width:230px ;
+    height:30px ;  
+}
+#Age{
+    margin-inline-start:258px;
+    width:230px ;
+    height:30px ;  
+}
+/* nah ini class untuk tombol, ada 2 reset dan sumbit, menggunakan display inline-block agar tidak tumpang tindih dan ada di baris yang sama
+    disini juga ada pengaturan lain untuk memperbagus tampilan button seperti background color da cursor pointer */
+.button{
+    display:inline-block;
+    margin-top: 5px;
+    border-radius: 2px;
+    width: 15%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(55, 130, 255);
+    color: white;
+    cursor: pointer;
+    font-size: 20;
+    transition: 0.4s;
+}
+/* ini id untuk tombol submitnya dan reset button nya, margin inlin-start untuk mengatur posisi */
+#Hitung-button{
+    margin-inline-start: 335px;
+    width: 20%;
+}
+#Reset-button{
+    margin-inline-start: 15px;
+}
+/* nah ini untuk efek hover atau ketika mouse berada diatas button (bukan mengklik) tampilannya akan menjadi hijau dan ada box shadownya */
+.button:hover {
+    background-color: #04AA6D;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+/* ini untuk tampilan button aktif atau ketika diklik */
+.button:active {
+    background-color: #00f508;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+/* nah dibawah ini css untuk output atau hasil dari perhitungan dan script dari file js
+    transition agar ada transisi ketika jawaban muncul, sisanya pengaturan background padding dan font agar sesuai
+    h3 itu bagian sub judul untuk hasil
+    #Result-Number untuk angka hasil perhitungan BMI, disesuaikan tampilannya agar menarik, termasuk ada bottom border agar menghighlight hasilnya
+    #Result Interpretation itu juga saya letakkan tengah dibawah #Result-Number
+    yang terakhir BMI advice hanya text align center agar teksnya berada di tengah */
+  .output-visible {
+    transition: 0.5s ease-in-out;
+    background-color: rgb(197, 242, 247) ;
+    border:solid rgb(142, 195, 245) ;
+    border-radius:10px;
+    padding-left:20px;
+    padding-right:20px;
+    font-family: Verdana, Sans-serif, Arial;
+}
+h3{
+    font-size:x-large;
+    text-align:center;
+}
+#Result-Number{
+    font-size:xx-large;
+    font-weight:bolder;
+    margin-bottom:2px;
+    text-align:center;
+    border-bottom:#04AA6D solid 5px ; 
+    width:40%;
+    margin-left:auto ;
+    margin-right:auto;
+}
+#Result-Interpretation{
+    font-size: x-large;
+    font-weight:bold;
+    margin-top:6px;
+    text-align:center;
+}
+#BMI-advice{
+    text-align:center;
+}
+/* untuk footer singkat padat dan insyaallah jelas, tidak terlalu banyak styling tapi yang penting tampilannya juga tidak jelek2 amat  */
+.footer {
+    margin-top:50px;
+    background-color: rgb(0, 130, 255);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+/* Selesaii */
