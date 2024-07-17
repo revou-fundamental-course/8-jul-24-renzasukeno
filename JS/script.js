@@ -1,5 +1,5 @@
 // Menunggu sampai DOM terisi penuh sebelum menjalankan skrip
-document.addEventListener('DOMContentLoaded', function() {
+ document.addEventListener('DOMContentLoaded', function() {
     // Mengambil elemen form dan output dari DOM
     const form = document.getElementById('Form-BMI');
     const output = document.getElementById('output');

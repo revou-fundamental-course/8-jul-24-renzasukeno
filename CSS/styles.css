@@ -1,7 +1,7 @@
 /* display:block agar h1 tetap ditengah
     margin set auto agar border dan posisi header tetap simetris di tengah
      */
-h1{
+h1 {
     color:rgb(64, 128, 188);
     text-align: center;
     border-bottom:solid;
