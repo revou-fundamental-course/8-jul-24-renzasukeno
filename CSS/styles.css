@@ -31,20 +31,19 @@ h1 {
     background-color:rgb(232, 255, 224);
     margin:auto;
     display: flex;
+    flex-wrap: wrap;
     width: 90%;
-    height: 100%;
 }
 /* flex:1 agar fungsi flex diatas bekerja */
 .left, .right {
-    flex: 1;
+    flex:1;
     padding: 30px;
-    overflow-y: auto;
     margin:auto;
     text-align: justify;
 }
-.left{
-    position:static;
-    margin-top:10px
+.left {
+    position:relative;
+    margin-top:10px;
 }
 /* Subjudul,font-size untuk mengatur ukuran font, margin-bottom untuk mengatur margin bawah dan transition untuk mengatur transisi*/
 h2{
@@ -59,7 +58,6 @@ h2{
     font-family:  Verdana, Sans-serif, Arial;
     margin-bottom:40px;
     margin-top:20px;
-
 }
 /* fieldset digunakan untuk menggambarkan kotak form, disini menggunakan border dan background color agar lebih menarik, serta margin agar memiliki jarak  */
 fieldset{
@@ -78,68 +76,31 @@ fieldset{
     font-family: Verdana, Sans-serif, Arial;
     font-size: medium;
     font-weight: bold;
-    margin-inline-start: 20px;
     color: rgb(0, 0, 0);
-    margin-top:200px;
-    position:static;
     transition: 0.4s;
 }
-/* form-group ini merupakan class dari masing-masing div (1 pertanyaan dan input di dalam form)
-    sama seperti tadi, menggunakan pengaturan margin agar berjarak dan lebih rapih */
-.form-group{
-    margin-top: 35px;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    position:static;
-    display:block;
+/* form-input ini merupakan class dari jawaban di form, tadi sempat ada perubahan agar lebih mudah melayoutnya
+     */
+.form-input {
+    margin-top: 10px;
 }
-/* form-group input ini class dari jawaban input */
-.form-group input{
+.form-input input[type="text"] {
+    width: 100%;
+    height: 30px;
     border-radius: 2px;
-    position: static;
+    border: 1px solid rgb(0, 130, 255);
+    padding: 5px;
+    font-size: 1em;
 }
-/* ini juga sama, bedanya hanya ketika kita fokus ke dalam kotak pengisian maka akan ada efek tambahan yang lebih bagus */
-.form-group input:focus {
-    border-color:rgb(0, 130, 255);
-    outline:none;
+.form-input input[type="radio"] {
+    margin-right: 10px;
 }
-/* nah ini bagian gender class untuk jawaban gender dalam hal ini pria atau wanita */
-.Gender{
-    display: inline;
-    color:black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-/*  nah disini adalah pengelompokan berdasarkan id untuk setiap jawaban, disini ada margin inline start agar berjarak dari pertanyaan form */
-#Gender-pria{
-    margin-inline-start:250px;
-}
-#Pria, #Wanita{
-    font-family:Georgia, 'Times New Roman', Times, serif ;
-    font-weight:700;
-}
-#Weight{
-    margin-inline-start:179px;
-    display: inline-flex;
-    width:230px ;
-    height:30px ;    
-}
-#Height{
-    margin-inline-start:172px;
-    width:230px ;
-    height:30px ;  
-}
-#Age{
-    margin-inline-start:238px;
-    width:230px ;
-    height:30px ;  
-}
-/* nah ini class untuk tombol, ada 2 reset dan sumbit, menggunakan display inline-block agar tidak tumpang tindih dan ada di baris yang sama
-    disini juga ada pengaturan lain untuk memperbagus tampilan button seperti background color da cursor pointer */
-.button{
+/* ini untuk tampilan button, baik button reset maupun button submit */
+.button {
     display:inline-block;
     margin-top: 5px;
     border-radius: 2px;
-    width: 15%;
+    width: 45%;
     padding: 10px 0;
     border: none;
     border-radius: 4px;
@@ -149,15 +110,10 @@ fieldset{
     font-size: 20;
     transition: 0.4s;
 }
-/* ini id untuk tombol submitnya dan reset button nya, margin inlin-start untuk mengatur posisi */
-#Hitung-button{
-    margin-inline-start: 335px;
-    width: 20%;
+#Hitung-button {
+    margin-right: 10px;
 }
-#Reset-button{
-    margin-inline-start: 15px;
-}
-/* nah ini untuk efek hover atau ketika mouse berada diatas button (bukan mengklik) tampilannya akan menjadi hijau dan ada box shadownya */
+/* ini untuk tampilan button hover agar lebih menarik */
 .button:hover {
     background-color: #04AA6D;
     color: white;
@@ -175,7 +131,7 @@ fieldset{
     #Result-Number untuk angka hasil perhitungan BMI, disesuaikan tampilannya agar menarik, termasuk ada bottom border agar menghighlight hasilnya
     #Result Interpretation itu juga saya letakkan tengah dibawah #Result-Number
     yang terakhir BMI advice hanya text align center agar teksnya berada di tengah */
-  .output-visible {
+.output-visible {
     transition: 0.5s ease-in-out;
     background-color: rgb(197, 242, 247) ;
     border:solid rgb(142, 195, 245) ;
@@ -184,11 +140,11 @@ fieldset{
     padding-right:20px;
     font-family: Verdana, Sans-serif, Arial;
 }
-h3{
+h3 {
     font-size:x-large;
     text-align:center;
 }
-#Result-Number{
+#Result-Number {
     font-size:xx-large;
     font-weight:bolder;
     margin-bottom:2px;
@@ -198,13 +154,13 @@ h3{
     margin-left:auto ;
     margin-right:auto;
 }
-#Result-Interpretation{
+#Result-Interpretation {
     font-size: x-large;
     font-weight:bold;
     margin-top:6px;
     text-align:center;
 }
-#BMI-advice{
+#BMI-advice {
     text-align:center;
 }
 /* untuk footer singkat padat dan insyaallah jelas, tidak terlalu banyak styling tapi yang penting tampilannya juga tidak jelek2 amat  */
@@ -215,4 +171,22 @@ h3{
     padding: 20px 0;
     text-align: center;
 }
-/* Selesaii */
+/* ini untuk pendukung webpage di mobile agar tampilan UI/UX jadi lebih baik */
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+    h1 {
+        width: 90%;
+    }
+    .form-group {
+        flex-direction: column;
+    }
+    .form-input {
+        width: 100%;
+    }
+    .button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

@@ -9,8 +9,8 @@
         event.preventDefault(); // Mencegah form dari reload halaman
 
         // Mengambil nilai dari input berat badan tinggi badan dan umur
-        const weight = parseFloat(document.getElementById('Weight').value);
-        const height = parseFloat(document.getElementById('Height').value) / 100; // Konversi tinggi dari cm ke meter
+        const weight = parseInt(document.getElementById('Weight').value);
+        const height = parseInt(document.getElementById('Height').value) / 100; // Konversi tinggi dari cm ke meter
         const age = parseInt(document.getElementById('Age').value);
 
         // Validasi input berat badan
@@ -91,4 +91,3 @@
         output.classList.remove('output-visible');
     });
 });
-// Selesai
